@@ -1,0 +1,56 @@
+#mainNav {
+    background-color: fade-out($secondary, 0.1);
+    font-family: $headings-font-family;
+
+    .navbar-brand {
+        color: $primary;
+    }
+
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: fade-out($white, 0.3);
+
+                font-weight: 800;
+            }
+
+            &.active {
+                .nav-link {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .navbar-logo {
+        height: 80px; /* Ajusta el tamaño de la imagen */
+        width: auto; /* Mantiene la proporción */
+        object-fit: contain; /* Evita deformaciones */
+        position: absolute; /* Fija la posición sin afectar los demás elementos */
+        top: 50%; /* Centra verticalmente */
+        transform: translateY(-50%); /* Ajusta el centro */
+        left: 150px; /* Margen izquierdo */
+        z-index: 1; /* Asegura que esté visible por encima */
+    }
+    
+    
+    @media (min-width: 992px) {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    font-size: 0.9rem;
+
+                    &:hover {
+                        color: fade-out($white, 0.6);
+                    }
+                }
+
+                &.active {
+                    .nav-link:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
