@@ -2,48 +2,45 @@ doctype html
 html(lang='en')
 
     head
-
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='Café fresco y de calidad en Luke\'s Café')
+        meta(name='author', content='Luke\'s Café')
 
         title Luke's Café
 
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
+        // Carga de CSS optimizada
         include includes/css
 
     body
 
         include includes/header
-
         include includes/navbar
 
         section.page-section.clearfix
             .container
-                .intro
-                    img.intro-img.img-fluid.mb-3.mb-lg-0.rounded(src='assets/img/intro.jpg', alt='...')
-                    .intro-text.left-0.text-center.bg-faded.p-5.rounded
+                .intro.d-flex.flex-column.flex-lg-row.align-items-center
+                    img.intro-img.img-fluid.mb-3.mb-lg-0.rounded(
+                        src='assets/img/image.png', alt='Café fresco', loading='lazy')
+                    .intro-text.text-center.bg-faded.p-5.rounded
                         h2.section-heading.mb-4
                             span.section-heading-upper Café fresco
                             span.section-heading-lower Vale la pena
-                        p.mb-3
-                            | Cada taza de nuestro café tiene un sabor único, desde el primer sorbo hasta el último. Nuestros granos de café son seleccionados cuidadosamente por nuestros expertos y tostados a la perfección. La frescura y calidad de nuestro café es evidente en cada taza.
-                        .intro-button.mx-auto
-                            a.btn.btn-primary.btn-xl() Visitanos hoy!
+                        p.mb-3 Cada taza de nuestro café tiene un sabor único, desde el primer sorbo hasta el último. Nuestros granos son seleccionados y tostados a la perfección para garantizar frescura y calidad.
+                        .intro-button
+                            a.btn.btn-primary.btn-xl(href='#') ¡Visítanos hoy!
 
         section.page-section.cta
             .container
-                .row
-                    .col-xl-9.mx-auto
+                .row.justify-content-center
+                    .col-lg-9
                         .cta-inner.bg-faded.text-center.rounded
                             h2.section-heading.mb-4
                                 span.section-heading-upper Nuestro compromiso
                                 span.section-heading-lower Contigo
-                            p.mb-0
-                                | En "LUKE'S" estamos comprometidos con la calidad y la sostenibilidad. Nos esforzamos por ofrecer un café excepcional, desde la cosecha hasta la taza. Nuestro compromiso con nuestros clientes, nuestros productores y nuestro planeta es lo que nos impulsa a seguir adelante.
+                            p.mb-0 En "LUKE'S" estamos comprometidos con la calidad y la sostenibilidad. Nos esforzamos por ofrecer un café excepcional, desde la cosecha hasta la taza.
 
         include includes/footer
-
         include includes/scripts
